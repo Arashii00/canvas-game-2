@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+    
+	<head>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>maw42 game</title>
+        
+        <script type="text/javascript">
+        var imgObj;
+var animate;
+function init () {
+    imgObj.documentElementById('car_audi');
+    imgObj.style.position='relative';
+    imgObj.style.left='0px';
+}
+
+function moveRight(){
+    imgObj.style.left=parseInt(imgObj.style.left) + 5+ 'px';
+    animate=setTimeout(moveRight,20);
+}
+window.onload=init;
+        </script>
+        
+	</head>
+	<body onLoad="car.start_game()">
+
+		<header>
+			<h1>¬¬¬¬¬¬¬¬</h1>
+			<p> </p>
+		</header>
+		
+            <div class="canvas">
+				<canvas id="gameCanvas" width="800" height="900" style="border:1px double" onClick="draw_car()"></canvas>
+    </div>
+        <div id="score_time">
+        Score: <span id="score">0</span>
+    </div>
+        
+    <div id="street">
+        <div id="line_1" class="line"></div>
+        <div id="line_2" class="line"></div>
+        <div id="line_3" class="line"></div>
+        </div>  
+        <form>
+        <img id="car_audi" class="car"src="Audi.png" />
+        </form>
+        <input type="button" value="play" onclick="moveRight()";>
+               <img id="car_van" class="carsprites" src="Mini_van.png">
+        <img id="car_truck" class="carsprites" src="Mini_truck.png">
+        <img id="car_taxi" class="carsprites" src="taxi.png">
+        	
+			<div class="contentitem">
+				
+				<h1>Controls  Info</h1>
+				<p>..............................</p>
+				<ul>
+					<li>
+						<p>Controls: Right, Left, Up & Down arrow keys</p>
+					</li>
+
+				</ul>
+			</div>
+			<div class="contentitem">
+				<h1>About</h1>
+					<br>
+                <ul>
+						<p>..................</p>
+			</ul>
+						
+    </div>
+<div id="restart_div">
+            <button id="restart">
+                Restart<br>
+                <small class="small_text">(press Enter)</small>
+            </button>
+  </div>
+		
+          
+
+
+      
+    </body>
+</html>
+
+
+
+		<script  src="script.js"></script>
